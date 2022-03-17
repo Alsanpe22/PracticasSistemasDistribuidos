@@ -19,15 +19,19 @@ public class Client {
 			String name = "calculadora";
 			calcImpl = CalculadoraHelper.narrow(ncRef.resolve_str(name));
 
-			// Executando métodos do remoto
-            System.out.println("> Enviando execução do método Calculadora#multiplicar");
-            int resultadoMultiplicacao = calcImpl.multiplicar(21, 2);
-            System.out.println("< Resposta do método Calculadora#multiplicar: " + resultadoMultiplicacao);
+			// Executando métodos 
+            System.out.println("Metodo Multiplicacion");
+            float resultadoMultiplicacao = calcImpl.multiplicar(21, 2);
+            System.out.println("Resultado:  " + resultadoMultiplicacao);
             
-            // Executando métodos do remoto
-            System.out.println("> Enviando execução do método Calculadora#dividir");
-            double resultadoDivisao = calcImpl.dividir(29, 7);
-            System.out.println("< Resposta do método Calculadora#dividir: " + resultadoDivisao);
+            // Executando métodos 
+            System.out.println("Metodo Division");
+            float resultadoDivisao = calcImpl.dividir(29, 7);
+            System.out.println("Resultado:  " + resultadoDivisao);
+
+			System.out.println("Raiz");
+            double resultadoRaiz = calcImpl.raiz(29);
+            System.out.println("Resultado:  " + resultadoRaiz);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
